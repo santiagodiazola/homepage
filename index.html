@@ -1,26 +1,32 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta configurations telling the browser how to parse characters and adapt viewports -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Santiago Diaz Ola - Résumé</title>
+
+    <!-- Link connecting this structural frame to your visual CSS styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
+      <!-- MASTER WRAPPER: Limits the width of the resume and centers it on the screen -->
       <div class="resume">
-        <!-- ========================================== -->
-        <!-- CONTACT INFORMATION CONTAINER              -->
-        <!-- ========================================== -->
+        <!-- ====================================================================== -->
+        <!-- 1. CONTACT INFORMATION CONTAINER (ROW 1)                              -->
+        <!-- ====================================================================== -->
         <div class="container">
           <div class="resume__block">
+            <!-- Main Title & Subheading -->
             <h1 class="contact-info__header">Santiago Diaz Ola</h1>
             <h3 class="contact-info__sub-header">
               Software Quality Assurance Engineer
             </h3>
 
+            <!-- HORIZONTAL FLEX WRAPPER: Splits the contact info items into columns -->
             <div class="contact_info_container fh">
-              <!-- Left Block: Location -->
+              <!-- Column A: Location Block -->
               <div class="contact-info__block">
                 <a
                   href="https://www.google.com/maps/place/Mendoza,+Argentina"
@@ -42,8 +48,9 @@
                   <span>Mendoza, Argentina</span>
                 </a>
               </div>
+              <!-- Closes Column A: Location Block -->
 
-              <!-- Center Block: Your Avatar -->
+              <!-- Column B: Center Avatar Image -->
               <div class="contact-info__block contact-info__block--center">
                 <img
                   class="contact-info__avatar"
@@ -51,8 +58,9 @@
                   alt="Santiago Diaz Ola Avatar"
                 />
               </div>
+              <!-- Closes Column B: Center Avatar Image -->
 
-              <!-- Right Block: LinkedIn / Professional Profile -->
+              <!-- Column C: LinkedIn Profile Link -->
               <div class="contact-info__block">
                 <a
                   href="https://www.linkedin.com/in/santiagodiazola"
@@ -74,17 +82,21 @@
                   <span>santiagodiazola</span>
                 </a>
               </div>
+              <!-- Closes Column C: LinkedIn Profile Link -->
             </div>
+            <!-- Closes .contact_info_container fh -->
           </div>
+          <!-- Closes .resume__block (Contact Section) -->
         </div>
-        <!-- Closes the Contact Information container -->
+        <!-- Closes .container (Row 1) -->
 
-        <!-- ========================================== -->
-        <!-- INTRO BLOCK CONTAINER                      -->
-        <!-- ========================================== -->
+        <!-- ====================================================================== -->
+        <!-- 2. INTRO / BIOGRAPHY CONTAINER (ROW 2)                                 -->
+        <!-- ====================================================================== -->
         <div class="container">
           <div class="resume__block">
             <div class="intro">
+              <!-- Decorative Blockquote Quote Icon -->
               <div class="intro__icon-wrapper">
                 <svg
                   class="intro__icon"
@@ -92,99 +104,346 @@
                   viewBox="0 0 512 512"
                 >
                   <path
-                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7
-                    24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0
-                    26.5 21.5 48 48 48h128c26.5 0 48-21.5
-                    48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64
-                    64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0
-                    103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0
-                    48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
                   ></path>
                 </svg>
               </div>
+
+              <!-- Professional Narrative Bio -->
               <p class="intro_text">
-                I spent ten years as a clinical psychologist — in hospitals,
-                primary care, forensic teams, and addiction treatment centers —
-                evaluating human behavior, writing reports that had to hold up
-                in court, and documenting every clinical decision with
-                precision. Then I discovered that software quality assurance
-                asks for exactly the same discipline: observe carefully, test
-                systematically, document reproducibly, and communicate findings
-                clearly to people who will challenge them. So I built a second
-                specialization. I completed a university-certified QA course
-                (Universidad Nacional de Córdoba), I'm currently training in
-                automation at Binary Studio Academy, and I've developed a
-                hands-on portfolio: (github.com/santiagodiazola). What I offer
-                is the combination: QA methodology executed with a clinician's
-                eye for how real users actually behave. I'm strong in
-                exploratory testing, edge-case discovery, precise bug reporting,
-                and evaluating content where psychology and technology meet.
-                Native Spanish, full professional English (Hunter College, NYC).
-                Based in Argentina (UTC-3), working remotely with global teams.
+                I am a psychologist with more than ten years of professional
+                experience working in public and private healthcare institutions
+                across Argentina. Throughout my career, I have assessed,
+                diagnosed, and treated children, adolescents, adults, couples,
+                families, and groups in a wide variety of clinical and community
+                settings. <br></br> 
+                My experience spans the three levels of healthcare
+                complexity—from primary care services and specialized addiction
+                centers to a psychiatric teaching hospital—as well as forensic
+                psychology, gender-based violence, autism support, homelessness
+                programs, and institutional network management. Working in these
+                environments strengthened my analytical thinking, attention to
+                detail, evidence-based decision making, collaboration within
+                multidisciplinary teams, and ability to communicate clearly in
+                complex situations. <br></br> 
+                After building a fulfilling career in
+                psychology, I decided to pursue a new professional challenge in
+                Quality Assurance. I was drawn to QA because it combines many of
+                the skills I have developed throughout my career: investigation,
+                systematic analysis, identifying inconsistencies, documenting
+                findings, and continuously improving quality through
+                collaboration. <br></br> 
+                I am currently developing my technical skills in
+                software testing through practical projects in manual testing,
+                API testing, and test automation. I have built a GitHub
+                portfolio with hands-on QA projects, I am completing a Quality
+                Assurance diploma at the National University of Córdoba, and I
+                am participating in the Binary Studio Academy Summer Bootcamp. <br></br> 
+                My goal is to contribute to a collaborative team where I can
+                combine strong analytical thinking, effective communication, and
+                a continuous learning mindset to help deliver high-quality
+                software.
               </p>
             </div>
+            <!-- Closes .intro -->
           </div>
+          <!-- Closes .resume__block (Intro Section) -->
         </div>
-        <!-- Closes the Intro Block container -->
+        <!-- Closes .container (Row 2) -->
+
+        <!-- ====================================================================== -->
+        <!-- 3. TECHNICAL & CORE COMPETENCIES CONTAINER                             -->
+        <!-- ====================================================================== -->
         <div class="container">
           <div class="resume__block">
             <div class="skills">
               <h3 class="skills__header">Skills</h3>
               <p class="skills__text">
-                Problem solving, Continuous Learning, Team Collaboration
+                <strong>QA Automation & Tools:</strong> Playwright (TypeScript),
+                Selenium WebDriver (Java), Postman, Git/GitHub, Jira, TestRail,
+                Browser DevTools, JSON Schema Validation, API Contract
+                Testing.<br />
+                <strong>Core Methodologies:</strong> Software Testing Life Cycle
+                (STLC), Exploratory Testing Charters, Root Cause Analysis (RCA),
+                Data-Integrity Auditing, Heuristic Evaluation, Precise Defect
+                Tracking.<br />
+                <strong>Behavioral Metrics:</strong> Psychodiagnostic
+                Evaluation, Advanced Clinical Observation, Systematic Case
+                Documentation, Forensic Expert Assessment.
               </p>
             </div>
+            <!-- Closes .skills -->
           </div>
+          <!-- Closes .resume__block (Skills Section) -->
         </div>
+        <!-- Closes .container (Skills Tier) -->
+
+        <!-- ====================================================================== -->
+        <!-- 4. MASTER DUAL-COLUMN LAYOUT GRID (EXPERIENCE & SIDEBAR)               -->
+        <!-- ====================================================================== -->
         <div class="container">
           <div class="resume__block">
+            <!-- MASTER FLEX ROW: Establishes parallel column layouts -->
             <div class="main-info fh">
-                <!-- Left Column: Main Work Timeline -->
+              <!-- ================================================================== -->
+              <!-- LEFT COLUMN: CHRONOLOGICAL EXPERIENCE TIMELINE                     -->
+              <!-- ================================================================== -->
               <div class="experiences">
-              <h3 class="experiences__header">Experience</h3>
+                <h3 class="experiences__header">Experience</h3>
+
+                <!-- Project Entry 1: OpenEMR Automated Suite -->
                 <div class="experiences__company">
                   <div class="experiences__company-header">
-                    <span class="experiences__company-header-durability">2005-Present</span>
-                    <h3 class="experiences__company-header-name">Binary Studio</h3>
+                    <span class="experiences__company-header-durability"
+                      >2026</span
+                    >
+                    <h3 class="experiences__company-header-name">
+                      Automated E2E QA Suite | OpenEMR
+                    </h3>
                   </div>
-
                   <div class="experiences__company-project">
-                    <span class="experiences__company-project-role">Full-Stack Developer</span>
-                    <h3 class="experiences__company-project-name">Binary Studio Website</h3>
+                    <span class="experiences__company-project-role"
+                      >QA Engineer / Portfolio Project</span
+                    >
+                    <h3 class="experiences__company-project-name">
+                      Clinical Workflow Regression Automation
+                    </h3>
                     <ul class="experiences__company-project-responsibilities">
-                      <li>Backend Architecture</li>
-                      <li>Frontend Development</li>
-                      <li>API Integration</li>
-                      <li>Code Maintenance</li>
+                      <li>
+                        Architected an automated end-to-end regression testing
+                        suite mapped to complex clinical workflows.
+                      </li>
+                      <li>
+                        Applied strict Page Object Model (POM) design patterns
+                        using Playwright and TypeScript to isolate assertions
+                        from UI layout locators.
+                      </li>
                     </ul>
                   </div>
                 </div>
-            
-              </div>
-              </div>
+                <!-- Closes Project Entry 1 -->
 
-                <!-- Right Column: Contextual Details -->
+                <!-- Project Entry 2: NHS Data Audit -->
+                <div class="experiences__company">
+                  <div class="experiences__company-header">
+                    <span class="experiences__company-header-durability"
+                      >2026</span
+                    >
+                    <h3 class="experiences__company-header-name">
+                      Technical API Data Audit | NHS
+                    </h3>
+                  </div>
+                  <div class="experiences__company-project">
+                    <span class="experiences__company-project-role"
+                      >API Testing Specialist / Portfolio Project</span
+                    >
+                    <h3 class="experiences__company-project-name">
+                      Patient Demographic Service Audit
+                    </h3>
+                    <ul class="experiences__company-project-responsibilities">
+                      <li>
+                        Executed a high-compliance data audit targeting
+                        sensitive patient demographic endpoints using Postman.
+                      </li>
+                      <li>
+                        Built automated validation collections checking payload
+                        logic, response status codes, and strict JSON schema
+                        compliance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Closes Project Entry 2 -->
+
+                <!-- Psychology Entry 1: Private Practice -->
+                <div class="experiences__company">
+                  <div class="experiences__company-header">
+                    <span class="experiences__company-header-durability"
+                      >2021 - Present</span
+                    >
+                    <h3 class="experiences__company-header-name">
+                      Clinical Psychologist
+                    </h3>
+                  </div>
+                  <div class="experiences__company-project">
+                    <span class="experiences__company-project-role"
+                      >Private Practice</span
+                    >
+                    <h3 class="experiences__company-project-name">
+                      Therapeutic Care & System Management
+                    </h3>
+                    <ul class="experiences__company-project-responsibilities">
+                      <li>
+                        Provide therapeutic support focusing on acculturation
+                        and processing significant life transitions.
+                      </li>
+                      <li>
+                        Utilize digital systems to log clinical documentation,
+                        diagnostic coding (DSM-5 / ICD-10), and evaluate
+                        progress trends.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Closes Psychology Entry 1 -->
+
+                <!-- Psychology Entry 2: El Sauce Hospital -->
+                <div class="experiences__company">
+                  <div class="experiences__company-header">
+                    <span class="experiences__company-header-durability"
+                      >July - December 2023</span
+                    >
+                    <h3 class="experiences__company-header-name">
+                      Hospital Escuela de Salud Mental "El Sauce"
+                    </h3>
+                  </div>
+                  <div class="experiences__company-project">
+                    <span class="experiences__company-project-role"
+                      >Psychologist</span
+                    >
+                    <h3 class="experiences__company-project-name">
+                      Acute Recreational & Accompaniment Units
+                    </h3>
+                    <ul class="experiences__company-project-responsibilities">
+                      <li>
+                        Designed weekly therapeutic, leisure, and artistic
+                        workshops for groups of 20+ hospitalized patients.
+                      </li>
+                      <li>
+                        Developed an "Accompaniment Space" to engineer
+                        supportive guidance networks for family members.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Closes Psychology Entry 2 -->
+
+                <!-- Psychology Entry 3: Forensic Board -->
+                <div class="experiences__company">
+                  <div class="experiences__company-header">
+                    <span class="experiences__company-header-durability"
+                      >2017 - 2019</span
+                    >
+                    <h3 class="experiences__company-header-name">
+                      Equipo de Abordaje del Abuso Sexual (EdeAAS)
+                    </h3>
+                  </div>
+                  <div class="experiences__company-project">
+                    <span class="experiences__company-project-role"
+                      >Forensic Psychologist</span
+                    >
+                    <h3 class="experiences__company-project-name">
+                      Expert Witness & System Assessment
+                    </h3>
+                    <ul class="experiences__company-project-responsibilities">
+                      <li>
+                        Conducted exhaustive psychodiagnostic evaluations of
+                        child victims utilizing rigorous evidence-based
+                        techniques.
+                      </li>
+                      <li>
+                        Provided highly accurate expert testimony and
+                        comprehensive documentation tailored to withstand legal
+                        cross-examination in court.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Closes Psychology Entry 3 -->
+              </div>
+              <!-- 🌟 END OF LEFT COLUMN (.experiences) -->
+
+              <!-- ================================================================== -->
+              <!-- RIGHT COLUMN: CONTEXTUAL METRICS & CREDENTIALS                     -->
+              <!-- ================================================================== -->
               <div class="additional-info fv">
-  <div class="additional-info__education">
-    <h3 class="additional-info__education-header">Education</h3>
-    <div class="additional-info__education-university">
-      <span class="additional-info__education-university-durability"> 2021 </span>
-      <h3 class="additional-info__education-university-speciality">Full-Stack Development</h3>
-      <p class="additional-info__education-university-name">Binary Studio Academy</p>
-    </div>
-  </div>
+                <!-- Academic Education Sub-Block -->
+                <div class="additional-info__education">
+                  <h3 class="additional-info__education-header">Education</h3>
 
-  <div class="additional-info__languages">
-    <h3 class="additional-info__languages-header">Languages</h3>
-    <p class="additional-info__languages-item">English</p>
-    <p class="additional-info__languages-item">Ukrainian</p>
-  </div>
-</div>
+                  <div class="additional-info__education-university">
+                    <span
+                      class="additional-info__education-university-durability"
+                      >Active (2026)</span
+                    >
+                    <h3
+                      class="additional-info__education-university-speciality"
+                    >
+                      Automation Bootcamp
+                    </h3>
+                    <p class="additional-info__education-university-name">
+                      Binary Studio Academy
+                    </p>
+                  </div>
+
+                  <div class="additional-info__education-university">
+                    <span
+                      class="additional-info__education-university-durability"
+                      >In Progress (2026)</span
+                    >
+                    <h3
+                      class="additional-info__education-university-speciality"
+                    >
+                      Diplomatura en Testing de Software
+                    </h3>
+                    <p class="additional-info__education-university-name">
+                      Universidad Nacional de Córdoba
+                    </p>
+                  </div>
+
+                  <div class="additional-info__education-university">
+                    <span
+                      class="additional-info__education-university-durability"
+                      >2008 - 2015</span
+                    >
+                    <h3
+                      class="additional-info__education-university-speciality"
+                    >
+                      B.S. & M.S. in Psychology
+                    </h3>
+                    <p class="additional-info__education-university-name">
+                      Universidad Nacional de San Luis (GPA 3.79)
+                    </p>
+                  </div>
+                </div>
+                <!-- Closes Education Sub-Block -->
+
+                <!-- Languages Sub-Block -->
+                <div class="additional-info__languages">
+                  <h3 class="additional-info__languages-header">Languages</h3>
+                  <p class="additional-info__languages-item">
+                    <strong>Spanish:</strong> Native Proficiency
+                  </p>
+                  <p class="additional-info__languages-item">
+                    <strong>English:</strong> Full Professional Proficiency
+                    (Hunter College, NYC)
+                  </p>
+                </div>
+                <!-- Closes Languages Sub-Block -->
+
+                <!-- Training & Certifications Sub-Block -->
+                <div class="additional-info__languages">
+                  <h3 class="additional-info__languages-header">
+                    Specialist Training
+                  </h3>
+                  <p class="additional-info__languages-item">
+                    • Drama Therapy Specialist (UNCuyo)
+                  </p>
+                  <p class="additional-info__languages-item">
+                    • Psychological First Aid & Crisis Therapy
+                  </p>
+                </div>
+                <!-- Closes Training Sub-Block -->
+              </div>
+              <!-- 🌟 END OF RIGHT COLUMN (.additional-info fv) -->
             </div>
+            <!-- Closes .main-info fh Master Flex Row Wrapper -->
           </div>
+          <!-- Closes .resume__block (Grid Tier) -->
         </div>
+        <!-- Closes .container (Master Column Row Tier) -->
       </div>
-      <!-- Closes resume -->
+      <!-- Closes master .resume structure -->
     </main>
   </body>
 </html>
