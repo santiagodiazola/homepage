@@ -341,10 +341,58 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ====================================================================== */
+/* =========PROBANDO ALGO COOL============================================================= */
+/* ========================================================================== */
+/* EDITORIAL HEADERS & GHOST CARD HOVER EFFECTS                               */
+/* ========================================================================== */
 
+/* Editorial Underline */
+.editorial-header {
+  font-size: 1.1em;
+  color: #1a1a1a;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
 
-/* ====================================================================== */
+/* Ghost Card Default State (Flat & Borderless) */
+.ghost-card {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 12px;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
 
+/* Ghost Card Hover State (Soft Elevation) */
+.ghost-card:hover {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Institution Logo Styling */
+.ghost-card__logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* ===============imagesss======================================================= */
+/* Universal Card Logo Styling */
+.card-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
 
 /* ====================================================================== */
