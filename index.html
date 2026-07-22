@@ -1,10 +1,696 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <!-- Meta configurations telling the browser how to parse characters and adapt viewports -->
     <meta charset="UTF-8" />
-    <title>Résumé</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Santiago Diaz Ola - Résumé</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    ― Hello World! &#x1F609;
+    <!-- MASTER WRAPPER -->
+    <main class="resume">
+      <!-- ====================================================================== -->
+      <!-- 1. CONTACT INFORMATION CONTAINER (EDITORIAL HEADER)                    -->
+      <!-- ====================================================================== -->
+      <header class="container">
+        <div class="resume__block">
+          <!-- Hero Row: Left-aligned Name & Subheading, Photo on Right -->
+          <div class="header-hero">
+            <div class="header-hero__text">
+              <h1 class="contact-info__header">Santiago Diaz Ola</h1>
+              <h2 class="contact-info__sub-header">
+                Clinical Psychologist | Software Quality Assurance
+              </h2>
+            </div>
+            <div class="header-hero__photo-wrapper">
+              <img
+                class="header-hero__photo"
+                src="assets/avatar.jpg"
+                alt="Santiago Diaz Ola"
+              />
+            </div>
+          </div>
+
+          <!-- Horizontal Contact Strip with SVG Icons -->
+          <div class="header-contact-strip">
+            <span class="contact-strip__item">📍 Mendoza, Argentina</span>
+            <span class="contact-strip__divider">•</span>
+
+            <a
+              href="mailto:santiagodiazola@gmail.com"
+              class="contact-strip__item contact-strip__link"
+            >
+              ✉️ santiagodiazola@gmail.com
+            </a>
+            <span class="contact-strip__divider">•</span>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/santiagodiazola"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-strip__item contact-strip__link"
+            >
+              <svg
+                class="contact-strip__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                ></path>
+              </svg>
+              LinkedIn ↗
+            </a>
+            <span class="contact-strip__divider">•</span>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/santiagodiazola"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-strip__item contact-strip__link"
+            >
+              <svg
+                class="contact-strip__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.5 16-33.8-55.8-6.3-114.3-28-114.3-124.1 0-27.5 9.8-49.8 25.8-67.4-2.6-6.3-11.2-32 2.6-66.4 0 0 21.1-6.8 69.2 25.7 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c48.1-32.6 69.2-25.7 69.2-25.7 13.8 34.4 5.2 60.1 2.6 66.4 16 17.7 25.8 39.9 25.8 67.4 0 96.4-58.7 117.7-114.8 123.9 9.1 7.8 17.3 22.9 17.3 46.3 0 33.5-.3 60.5-.3 68.8 0 6.6 4.6 14.6 17.5 12.1C426.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"
+                ></path>
+              </svg>
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ====================================================================== -->
+      <!-- 2. INTRO / BIOGRAPHY CONTAINER                                         -->
+      <!-- ====================================================================== -->
+      <div class="container">
+        <div class="resume__block">
+          <div class="intro">
+            <!-- Decorative Blockquote Quote Icon -->
+            <div class="intro__icon-wrapper">
+              <svg
+                class="intro__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                aria-hidden="true"
+              >
+                <path
+                  d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                ></path>
+              </svg>
+            </div>
+
+            <!-- Professional Narrative Bio -->
+            <p class="intro_text">
+              I am a psychologist with more than ten years of professional
+              experience working in public and private healthcare institutions
+              across Argentina. Throughout my career, I have assessed,
+              diagnosed, and treated children, adolescents, adults, couples,
+              families, and groups in a wide variety of clinical and community
+              settings. <br /><br />
+              My experience spans the three levels of healthcare complexity—from
+              primary care services and specialized addiction centers to a
+              psychiatric teaching hospital—as well as forensic psychology,
+              gender-based violence, autism support, homelessness programs, and
+              institutional network management. Working in these environments
+              strengthened my analytical thinking, attention to detail,
+              evidence-based decision making, collaboration within
+              multidisciplinary teams, and ability to communicate clearly in
+              complex situations. <br /><br />
+              After building a fulfilling career in psychology, I decided to
+              pursue a new professional challenge in Quality Assurance. I was
+              drawn to QA because it combines many of the skills I have
+              developed throughout my career: investigation, systematic
+              analysis, identifying inconsistencies, documenting findings, and
+              continuously improving quality through collaboration.
+              <br /><br />
+              I am currently developing my technical skills in software testing
+              through practical projects in manual testing, API testing, and
+              test automation. I have built a GitHub portfolio with hands-on QA
+              projects, I am completing a Quality Assurance diploma at the
+              National University of Córdoba, and I am participating in the
+              Binary Studio Academy Summer Bootcamp.
+              <br /><br />
+              My goal is to contribute to a collaborative team where I can
+              combine strong analytical thinking, effective communication, and a
+              continuous learning mindset to help deliver high-quality software.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================== -->
+      <!-- 3. QA SKILLS & TOOLS                                                   -->
+      <!-- ====================================================================== -->
+      <section class="container">
+        <div class="resume__block">
+          <div class="skills">
+            <h3 class="skills__header">QA Skills & Tools</h3>
+            <div class="skills__grid">
+              <!-- Testing -->
+              <div class="skills__card">
+                <h4 class="skills__title">🧪 Testing</h4>
+                <div class="skills__tags">
+                  <span>Manual Testing</span>
+                  <span>Functional Testing</span>
+                  <span>Exploratory Testing</span>
+                  <span>Regression Testing</span>
+                  <span>Test Case Design</span>
+                  <span>Bug Reporting</span>
+                  <span>Equivalence Partitioning</span>
+                  <span>Boundary Value Analysis</span>
+                </div>
+              </div>
+
+              <!-- API Testing -->
+              <div class="skills__card">
+                <h4 class="skills__title">🔌 API Testing</h4>
+                <div class="skills__tags">
+                  <span>Postman</span>
+                  <span>REST APIs</span>
+                  <span>HTTP Methods</span>
+                  <span>JSON</span>
+                  <span>Authentication</span>
+                  <span>Query Parameters</span>
+                  <span>API Response Validation</span>
+                </div>
+              </div>
+
+              <!-- Automation & Web -->
+              <div class="skills__card">
+                <h4 class="skills__title">🤖 Automation & Web</h4>
+                <div class="skills__tags">
+                  <span>Playwright</span>
+                  <span>TypeScript</span>
+                  <span>JavaScript</span>
+                  <span>Page Object Model</span>
+                  <span>UI Automation</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Browser DevTools</span>
+                  <span>DOM Inspection</span>
+                </div>
+              </div>
+
+              <!-- Tools & Workflow -->
+              <div class="skills__card">
+                <h4 class="skills__title">🛠️ Tools & Workflow</h4>
+                <div class="skills__tags">
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>GitLab</span>
+                  <span>Jira</span>
+                  <span>Trello</span>
+                  <span>TestRail</span>
+                  <span>Agile / Scrum</span>
+                  <span>SDLC / STLC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================== -->
+      <!-- 4. QA PROJECTS AND PORTFOLIO                                           -->
+      <!-- ====================================================================== -->
+      <section class="container">
+        <div class="resume__block">
+          <div class="projects-section">
+            <h3 class="skills__header skills__header--projects">
+              QA Projects & Portfolio
+            </h3>
+
+            <!-- Project 1: OpenEMR -->
+            <div class="project-card">
+              <div class="project-card__header">
+                <h4 class="project-card__title">
+                  OpenEMR Healthcare — UI Automation Testing
+                </h4>
+                <a
+                  href="https://github.com/santiagodiazola/openemr-playwright-automation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="github-link-btn"
+                >
+                  View Repository ↗
+                </a>
+              </div>
+              <div class="project-card__tags">
+                <span class="skill-pill">Playwright</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">Page Object Model</span>
+                <span class="skill-pill">GitHub</span>
+              </div>
+              <p class="project-card__description">
+                Developed an automated UI testing project using Playwright and
+                TypeScript to test key workflows in OpenEMR. Applied the Page
+                Object Model to organize test code and improve maintainability.
+              </p>
+            </div>
+
+            <!-- Project 2: NHS Patient Demographic Service -->
+            <div class="project-card">
+              <div class="project-card__header">
+                <h4 class="project-card__title">
+                  NHS Patient Demographic Service — API Testing
+                </h4>
+                <a
+                  href="https://github.com/santiagodiazola/nhs-pds-api-audit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="github-link-btn"
+                >
+                  View Repository ↗
+                </a>
+              </div>
+              <div class="project-card__tags">
+                <span class="skill-pill">Postman</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">JSON</span>
+                <span class="skill-pill">API Testing</span>
+              </div>
+              <p class="project-card__description">
+                Created Postman collections to test API endpoints and validate
+                status codes, response data, authentication, and JSON schemas.
+                Practiced positive and negative testing scenarios to identify
+                unexpected API behavior.
+              </p>
+            </div>
+
+            <!-- Project 3: Hilton Honors -->
+            <div class="project-card">
+              <div class="project-card__header">
+                <h4 class="project-card__title">
+                  Hilton Honors — Manual Web Testing
+                </h4>
+                <a
+                  href="https://github.com/santiagodiazola/hilton-mendoza-qa-audit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="github-link-btn"
+                >
+                  View Repository ↗
+                </a>
+              </div>
+              <div class="project-card__tags">
+                <span class="skill-pill">Manual Testing</span>
+                <span class="skill-pill">Exploratory Testing</span>
+                <span class="skill-pill">Browser DevTools</span>
+                <span class="skill-pill">Trello</span>
+              </div>
+              <p class="project-card__description">
+                Performed exploratory and functional testing of a hotel booking
+                website, focusing on registration and reservation workflows.
+                Documented defects and usability observations and investigated
+                issues using browser developer tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================== -->
+      <!-- 5. DUAL-COLUMN LAYOUT GRID (EXPERIENCE & SIDEBAR)                      -->
+      <!-- ====================================================================== -->
+      <div class="container">
+        <div class="resume__block">
+          <div class="main-info fh">
+            <!-- LEFT COLUMN: PROFESSIONAL EXPERIENCE -->
+            <section class="experiences">
+              <h3 class="experiences__header">Professional Experience</h3>
+              <p class="experiences__subtitle">
+                Key functional roles synthesized across 10+ years in public
+                healthcare, forensic, and institutional networks.
+              </p>
+
+              <!-- ROLE 1 -->
+              <div class="experiences__company">
+                <div class="experiences__company-header">
+                  <span class="experiences__company-header-durability"
+                    >2015 - Present</span
+                  >
+                  <h4 class="experiences__company-header-name">
+                    Clinical Psychologist & Diagnostic Specialist
+                  </h4>
+                </div>
+                <div class="experiences__company-project">
+                  <span class="experiences__company-project-role">
+                    Public Healthcare Networks & Private Practice
+                  </span>
+                  <ul class="experiences__company-project-responsibilities">
+                    <li>
+                      Conducted comprehensive psychodiagnostic assessments,
+                      intake evaluations, and psychotherapy across high-volume
+                      primary care centers (1,000+ appointments annually).
+                    </li>
+                    <li>
+                      Managed end-to-end patient care systems, maintaining
+                      high-integrity clinical documentation and diagnostic
+                      coding (DSM-5, ICD-10).
+                    </li>
+                    <li>
+                      Streamlined healthcare delivery workflows within
+                      multidisciplinary teams, playing a key role in reducing
+                      patient wait times by 30% in community settings.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ROLE 2 -->
+              <div class="experiences__company">
+                <div class="experiences__company-header">
+                  <span class="experiences__company-header-durability"
+                    >2017 - 2019</span
+                  >
+                  <h4 class="experiences__company-header-name">
+                    Forensic Psychologist & Legal Expert Witness
+                  </h4>
+                </div>
+                <div class="experiences__company-project">
+                  <span class="experiences__company-project-role">
+                    Equipo de Abordaje del Abuso Sexual (EdeAAS) & Judiciary
+                  </span>
+                  <ul class="experiences__company-project-responsibilities">
+                    <li>
+                      Executed high-compliance forensic psychodiagnostic
+                      assessments in sensitive judicial cases utilizing
+                      standardized testing battery tools and specialized Gesell
+                      chamber interviews.
+                    </li>
+                    <li>
+                      Authored comprehensive forensic reports engineered to
+                      withstand strict legal cross-examination, delivering
+                      expert witness testimony in court proceedings.
+                    </li>
+                    <li>
+                      Participated in action-research studies evaluating
+                      gender-based violence dynamics within correctional
+                      facility environments.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ROLE 3 -->
+              <div class="experiences__company">
+                <div class="experiences__company-header">
+                  <span class="experiences__company-header-durability"
+                    >2019 - 2023</span
+                  >
+                  <h4 class="experiences__company-header-name">
+                    Acute Mental Health & Crisis Intervention Specialist
+                  </h4>
+                </div>
+                <div class="experiences__company-project">
+                  <span class="experiences__company-project-role">
+                    Hospital "El Sauce", Specialized Addiction Centers &
+                    Emergency Units
+                  </span>
+                  <ul class="experiences__company-project-responsibilities">
+                    <li>
+                      Delivered psychological treatment and designed
+                      therapeutic/artistic workshops (20+ participants) for
+                      hospitalized patients navigating severe acute mental
+                      health conditions.
+                    </li>
+                    <li>
+                      Founded and coordinated community intake devices and
+                      "Accompaniment Spaces" to provide immediate support
+                      networks for families navigating complex institutional
+                      systems.
+                    </li>
+                    <li>
+                      Provided frontline crisis intervention, psychological
+                      first aid, and support for vulnerable populations,
+                      including homeless individuals and institutionalized
+                      youth.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ROLE 4 -->
+              <div class="experiences__company">
+                <div class="experiences__company-header">
+                  <span class="experiences__company-header-durability"
+                    >2020 - 2023</span
+                  >
+                  <h4 class="experiences__company-header-name">
+                    Institutional Network Lead & Public Health Coordinator
+                  </h4>
+                </div>
+                <div class="experiences__company-project">
+                  <span class="experiences__company-project-role">
+                    Plan Provincial de Adicciones & Cross-Ministerial Networks
+                  </span>
+                  <ul class="experiences__company-project-responsibilities">
+                    <li>
+                      Led inter-agency network strategies across state
+                      ministries (Health, Security, Education, Social
+                      Development), authoring an institutional resource guide to
+                      optimize public access to essential services.
+                    </li>
+                    <li>
+                      Co-designed and facilitated national-level training
+                      courses in partnership with SEDRONAR and established
+                      permanent community consultation spaces.
+                    </li>
+                    <li>
+                      Fostered academic research exchange and coordinated
+                      cross-functional workshops uniting medical, social, and
+                      legal professionals.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- PDF CV LINK CALLOUT -->
+              <div class="full-cv-link">
+                <p>
+                  📌 <strong>Looking for full institutional details?</strong
+                  ><br />
+                  To view the complete chronological list across all 11+ public
+                  hospitals, clinics, and government programs, download the
+                  <a
+                    href="assets/DIAZOLA_Clinical_CV.pdf"
+                    target="_blank"
+                    class="full-cv-link__btn"
+                  >
+                    Full Institutional CV (PDF) </a
+                  >.
+                </p>
+              </div>
+            </section>
+
+            <!-- RIGHT COLUMN: SIDEBAR CREDENTIALS -->
+            <aside class="additional-info fv">
+              <!-- EDUCATION & QA CREDENTIALS SECTION -->
+              <div class="additional-info__education">
+                <h3 class="section-header-clean">Education & QA Training</h3>
+
+                <!-- ITEM 1: BSA -->
+                <div class="education-item">
+                  <div class="education-item__logo-wrapper">
+                    <a
+                      href="https://academy.binary-studio.com/technology/qa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/BSA_logo.png"
+                        alt="BSA Logo"
+                        class="card-logo"
+                      />
+                    </a>
+                  </div>
+                  <h4 class="education-item__title">
+                    Intensive QA Summer Bootcamp
+                  </h4>
+                  <p class="education-item__institution">
+                    Binary Studio Academy
+                  </p>
+                  <ul class="education-item__list">
+                    <li>
+                      Hands-on training in software testing, test design,
+                      requirements analysis, and issue tracking.
+                    </li>
+                    <li>
+                      Developing skills in API testing, SQL, Git/GitFlow, and
+                      test automation.
+                    </li>
+                    <li>
+                      Practical focus on web and API testing, collaborative
+                      workflows, and CI/CD fundamentals.
+                    </li>
+                    <li>
+                      Exposure to AI-augmented Quality Assurance and modern QA
+                      practices.
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- ITEM 2: UNC ICARO -->
+                <div class="education-item">
+                  <div class="education-item__logo-wrapper">
+                    <a
+                      href="https://icaro.org.ar/producto/path-tester-certificado/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/icaro_logo.webp"
+                        alt="ICARO Logo"
+                        class="card-logo"
+                      />
+                    </a>
+                  </div>
+                  <h4 class="education-item__title">
+                    Diploma in Software Testing
+                  </h4>
+                  <p class="education-item__institution">
+                    Universidad Nacional de Córdoba — ICARO · In Progress — 2026
+                  </p>
+                  <ul class="education-item__list">
+                    <li>
+                      Comprehensive training in software testing fundamentals,
+                      STLC, Agile/Scrum, test design, defect management, and
+                      web/mobile testing.
+                    </li>
+                    <li>
+                      Practical training in API testing, REST/SOAP, JSON, and
+                      Postman.
+                    </li>
+                    <li>
+                      Developing skills in test automation with Java, Selenium
+                      WebDriver, JUnit/TestNG, Git/GitHub, and Page Object
+                      Model.
+                    </li>
+                    <li>
+                      Database fundamentals covering SQL, MySQL, relational
+                      databases, and query construction.
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- ITEM 3: UNSL Licentiate Degree -->
+                <div class="education-item">
+                  <div class="education-item__logo-wrapper">
+                    <a
+                      href="http://www.unsl.edu.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/UNSL_logo.jpeg"
+                        alt="UNSL Logo"
+                        class="card-logo"
+                      />
+                    </a>
+                  </div>
+                  <h4 class="education-item__title">
+                    Licentiate in Psychology
+                  </h4>
+                  <p class="education-item__institution">
+                    Universidad Nacional de San Luis — Argentina (2006 – 2013)
+                  </p>
+                  <ul class="education-item__list">
+                    <li>
+                      Core focus on quantitative research methods,
+                      psychodiagnostics, behavioral analysis, and systematic
+                      assessment.
+                    </li>
+                  </ul>
+                  <a
+                    href="assets/WES_Evaluation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="sidebar-sublink"
+                  >
+                    World Education Services (WES) Evaluated — U.S. Master's
+                    Equivalent (GPA 3.79) ↗
+                  </a>
+                </div>
+              </div>
+
+              <!-- LANGUAGES SECTION -->
+              <div class="sidebar-block">
+                <h3 class="editorial-header">Languages</h3>
+                <ul class="sidebar-list">
+                  <li>🇦🇷 <strong>Spanish:</strong> Native Proficiency</li>
+                  <li>
+                    🇺🇸 <strong>English:</strong> Professional Working
+                    Proficiency
+                    <br />
+                    <a
+                      href="assets/Hunter_certificate.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="sidebar-sublink"
+                    >
+                      Hunter College of the City University of New York ↗
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- ADDITIONAL CREDENTIALS SECTION -->
+              <div class="sidebar-block">
+                <h3 class="editorial-header">Additional Credentials</h3>
+                <ul class="sidebar-credentials-list">
+                  <li>
+                    <strong>Software Testing in the Age of AI:</strong> LinkedIn
+                    Learning (Apr 2026)
+                  </li>
+                  <li>
+                    <strong
+                      >Programming Foundations (Software Testing/QA):</strong
+                    >
+                    LinkedIn Learning (Mar 2026)
+                  </li>
+                  <li>
+                    <strong>Agile Foundations:</strong> LinkedIn Learning (Mar
+                    2026)
+                  </li>
+                  <li>
+                    <strong>Diplomado en Dramaterapia:</strong> UNCuyo (222 hrs)
+                  </li>
+                  <li>
+                    <strong>Crisis Therapy & Psychological First Aid:</strong>
+                    Alfredo Moffatt School
+                  </li>
+                  <li>
+                    <strong>Addiction & Consumption Problems:</strong> Plan
+                    Provincial de Adicciones
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
