@@ -8,44 +8,22 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  line-height: 1.5;
-
-  --primary-text-color: #181820;
+:root {
+  --primary-text-color: #1a1a1a;
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
   --border-color: #ff9a0045;
   --text-decoration-color: #ff9a00;
-}
-/* ========================================================================== */
-/* GLOBAL UNIFIED SECTION HEADERS                                            */
-/* ========================================================================== */
-
-/* Center Section Headers (QA Skills & Tools, QA Projects & Portfolio) */
-.skills__header {
-  font-size: 1.25em;
-  font-weight: 800;
-  color: #1a1a1a;
-  text-align: center;
-  margin-bottom: 24px;
+  --link-blue: #0066cc;
 }
 
-/* Left-Aligned Column Headers (Professional Experience, Education, etc.) */
-.experiences__header,
-.section-header-clean,
-.editorial-header {
-  font-size: 1.25em;
-  font-weight: 800;
-  color: #1a1a1a;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 12px;
-  padding-bottom: 0;
-  border-bottom: none;
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+  background-color: #fcfcfc;
 }
-
 
 /* ========================================================================== */
 /* 2. LAYOUT CONTAINERS & UTILITIES                                           */
@@ -58,17 +36,25 @@ body {
 }
 
 .resume {
-  margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 30px 0;
   max-width: 900px;
+  border-radius: 8px;
 }
 
 .resume__block {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.resume .container:last-child .resume__block {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Flexbox Direction Helpers */
@@ -84,122 +70,153 @@ body {
   justify-content: space-between;
 }
 
-
 /* ========================================================================== */
-/* 3. HEADER & CONTACT INFO SECTION                                           */
+/* 3. GLOBAL UNIFIED SECTION HEADERS                                          */
 /* ========================================================================== */
 
-.contact-info__header,
-.contact-info__sub-header {
+.skills__header {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: var(--primary-text-color);
   text-align: center;
+  margin-bottom: 24px;
+}
+
+.experiences__header,
+.section-header-clean,
+.editorial-header {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ========================================================================== */
+/* 4. EDITORIAL HEADER SECTION                                                */
+/* ========================================================================== */
+
+.header-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-hero__text {
+  flex: 1;
+  text-align: left;
 }
 
 .contact-info__header {
+  font-size: 2.3em;
+  font-weight: 800;
   color: var(--primary-text-color);
-  margin-bottom: 15px;
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+  text-align: left;
 }
 
 .contact-info__sub-header {
+  font-size: 1.05em;
+  font-weight: 600;
   color: var(--secondary-text-color);
-  margin-bottom: 30px;
+  margin: 0;
+  text-align: left;
 }
 
-.contact-info__block {
+.header-hero__photo-wrapper {
+  flex-shrink: 0;
+}
+
+.header-hero__photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Horizontal Contact Strip */
+.header-contact-strip {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.contact-info__block--center {
-  justify-content: center;
-}
-
-.contact-info__item {
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 0.9em;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 0.88em;
+  color: #555;
+}
+
+.contact-strip__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 500;
 }
 
-.contact-info__item:not(:last-child) {
-  margin-bottom: 12px; /* Smooth spacing for 3 stacked links */
+.contact-strip__link {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-.contact-info__item-icon-wrapper {
-  margin-right: 10px;
-  width: 20px;
-  display: flex;
-  justify-content: center;
+.contact-strip__link:hover {
+  text-decoration: underline;
+  color: #004499;
 }
 
-.contact-info__item-icon {
-  height: 1.1428rem;
-  vertical-align: text-bottom;
+.contact-strip__svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
 }
 
-.contact-info__item-icon path {
-  fill: var(--icon-color);
+.contact-strip__divider {
+  color: #cbd5e1;
+  font-weight: 400;
 }
-
-.contact-info__avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 3px solid var(--text-decoration-color);
-}
-
-
 
 /* ========================================================================== */
-/* 4. INTRO / BIOGRAPHY SECTION                                               */
+/* 5. INTRO / BIOGRAPHY SECTION                                               */
 /* ========================================================================== */
 
 .intro {
   display: flex;
-  justify-content: start;
+  align-items: flex-start;
 }
 
 .intro__icon-wrapper {
-  margin-right: 30px;
+  margin-right: 20px;
   width: 30px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .intro__icon {
-  height: 1.1428rem;
-  vertical-align: text-bottom;
-}
-
-.intro__icon path {
+  width: 24px;
+  height: 24px;
   fill: var(--text-decoration-color);
 }
 
 .intro_text {
   color: var(--secondary-text-color);
   text-align: justify;
+  font-size: 0.95em;
+  line-height: 1.6;
 }
-
 
 /* ========================================================================== */
-/* 5. QA SKILLS & PORTFOLIO CARDS                                             */
+/* 6. QA SKILLS & TOOLS SECTION                                               */
 /* ========================================================================== */
-
-.skills__header {
-  color: var(--secondary-text-color);
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.skills__text {
-  color: var(--secondary-text-color);
-  text-align: justify;
-}
 
 .skills__grid {
   display: grid;
@@ -223,8 +240,9 @@ body {
 
 .skills__title {
   margin: 0 0 12px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
+  color: var(--primary-text-color);
 }
 
 .skills__tags {
@@ -238,28 +256,21 @@ body {
   padding: 6px 10px;
   border-radius: 6px;
   background-color: #f5f5f5;
-  font-size: 13px;
+  font-size: 0.82em;
   line-height: 1.3;
   transition: all 0.2s ease;
 }
 
 .skills__tags span:hover {
-  background-color: #f5a623;
+  background-color: var(--text-decoration-color);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   cursor: default;
 }
 
-.skills__strengths {
-  margin-top: 20px;
-  padding: 18px;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  background-color: #ffffff;
-}
 /* ========================================================================== */
-/* PROJECT CARDS & REPOSITORY BUTTONS                                         */
+/* 7. QA PROJECTS AND PORTFOLIO SECTION                                       */
 /* ========================================================================== */
 
 .project-card {
@@ -296,7 +307,7 @@ body {
 .github-link-btn {
   font-size: 0.8em;
   font-weight: 700;
-  color: #0066cc;
+  color: var(--link-blue);
   background-color: #f0f7ff;
   border: 1px solid #bae0ff;
   padding: 5px 12px;
@@ -306,9 +317,9 @@ body {
 }
 
 .github-link-btn:hover {
-  background-color: #0066cc;
+  background-color: var(--link-blue);
   color: #ffffff;
-  border-color: #0066cc;
+  border-color: var(--link-blue);
 }
 
 .project-card__tags {
@@ -330,7 +341,7 @@ body {
 }
 
 .skill-pill:hover {
-  background-color: #f5a623;
+  background-color: var(--text-decoration-color);
   color: #ffffff;
 }
 
@@ -342,201 +353,230 @@ body {
 }
 
 /* ========================================================================== */
-/* 6. PROFESSIONAL EXPERIENCE SECTION                                         */
+/* 8. DUAL-COLUMN MAIN LAYOUT (EXPERIENCE & SIDEBAR)                          */
 /* ========================================================================== */
 
 .experiences {
-  flex: 1 1 60%;
-  margin-right: 50px;
+  flex: 1 1 58%;
+  margin-right: 40px;
 }
 
-/* Standardized Left Header */
-.experiences__header {
-  color: #1a1a1a;
-  font-size: 1.2em;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 8px;
+.experiences__subtitle {
+  font-size: 0.85em;
+  color: var(--secondary-text-color);
+  margin-top: -4px;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-/* Standardized Right Header (Identical line height & sizing) */
-.section-header-clean {
-  font-size: 1.2em;
-  color: #1a1a1a;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 8px;
-  padding-bottom: 0;
-  border-bottom: none;
+.experiences__company {
+  margin-bottom: 24px;
 }
 
-/* Aligns first education card with left column's first role entry */
-.education-item:first-of-type {
-  margin-top: 42px;
+.experiences__company-header {
+  margin-bottom: 6px;
 }
 
 .experiences__company-header-durability {
   color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 0.85em;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
 }
 
 .experiences__company-header-name {
   color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
-  text-align: left;
-  margin-bottom: 20px;
+  font-size: 1.05em;
+  font-weight: 700;
+  margin: 0;
 }
 
 .experiences__company-project {
-  margin-left: 15px;
-  margin-bottom: 25px;
+  margin-top: 4px;
 }
 
 .experiences__company-project-role {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.experiences__company-project-name {
-  color: var(--primary-text-color);
-  text-align: left;
-  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-size: 0.88em;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .experiences__company-project-responsibilities {
   color: var(--secondary-text-color);
-  padding-left: 20px;
+  padding-left: 18px;
+  font-size: 0.88em;
+  line-height: 1.5;
 }
 
-
-/* ========================================================================== */
-/* 7. EDUCATION & ADDITIONAL INFO SECTION                                     */
-/* ========================================================================== */
-
-.additional-info {
-  flex: 1 1 40%;
+.experiences__company-project-responsibilities li {
+  margin-bottom: 6px;
 }
 
-.additional-info__education {
-  margin-bottom: 16px; /* Tightened container gap */
+/* Full Institutional CV Callout Box */
+.full-cv-link {
+  margin-top: 25px;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--link-blue);
+  border-radius: 4px;
 }
 
-.education-item {
-  margin-bottom: 28px; /* Standardized spacing between items */
+.full-cv-link p {
+  font-size: 0.88em;
+  margin: 0;
+  color: #444;
+  line-height: 1.45;
 }
 
-/* Prevents stacked margins above Languages header */
-.education-item:last-child {
-  margin-bottom: 0;
-}
-
-.additional-info__education-header {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.additional-info__education-university-durability {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.additional-info__education-university-speciality {
-  color: var(--primary-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.additional-info__education-university-name {
-  color: var(--secondary-text-color);
-}
-
-.additional-info__languages {
-  margin-bottom: 20px;
-}
-
-.additional-info__languages-header {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.additional-info__languages-item {
-  color: var(--secondary-text-color);
-}
-
-/* Section Header (Matches Professional Experience) */
-.section-header-clean {
-  font-size: 1.2em;
-  color: #1a1a1a;
+.full-cv-link__btn {
+  color: var(--link-blue);
   font-weight: 700;
-  margin-bottom: 28px;
-  padding-bottom: 0;
-  border-bottom: none;
+  text-decoration: underline;
+}
+
+/* Sidebar Column */
+.additional-info {
+  flex: 1 1 42%;
 }
 
 .education-item {
-  margin-bottom: 38px;
+  margin-bottom: 28px;
 }
 
-/* Logo Frame Styling */
+.education-item__logo-wrapper {
+  margin-bottom: 10px;
+}
+
 .card-logo {
-  width: 90px !important;
-  height: 90px !important;
-  object-fit: contain !important;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   border-radius: 6px;
   padding: 6px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  flex-shrink: 0;
 }
 
-/* Logo Hover Elevation Effect */
-.card-logo:hover,
-.education-item:hover .card-logo {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 10px 22px rgba(0, 102, 204, 0.18);
-  border-color: #0066cc;
+.card-logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 102, 204, 0.15);
+  border-color: var(--link-blue);
 }
 
-.editorial-header {
-  font-size: 1.2em;
+.education-item__title {
+  margin: 4px 0 2px 0;
+  font-size: 1.02em;
+  color: var(--primary-text-color);
   font-weight: 700;
-  color: #1a1a1a;
+}
+
+.education-item__institution {
+  margin: 0 0 6px 0;
+  color: var(--secondary-text-color);
+  font-size: 0.86em;
+  font-weight: 600;
+}
+
+.education-item__list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 1em;
+  color: var(--secondary-text-color);
+  line-height: 1.45;
+}
+
+.education-item__list li {
+  margin-bottom: 4px;
+}
+
+.wes-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--link-blue);
+  text-decoration: underline;
+}
+
+/* Sidebar General Blocks */
+.sidebar-block {
   margin-top: 24px;
-  margin-bottom: 8px; /* Reduced from default browser spacing to pull items up */
+}
+
+.sidebar-list,
+.sidebar-credentials-list {
+  padding-left: 18px;
+  font-size: 0.85em;
+  color: var(--secondary-text-color);
+  line-height: 1.55;
+}
+
+.sidebar-list li,
+.sidebar-credentials-list li {
+  margin-bottom: 8px;
+}
+
+.sidebar-sublink {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--link-blue);
+  text-decoration: underline;
+}
+
+.sidebar-sublink:hover {
+  text-decoration: underline;
 }
 
 /* ========================================================================== */
-/* 8. MEDIA QUERIES (RESPONSIVE DESIGN)                                       */
+/* 9. MEDIA QUERIES (RESPONSIVE DESIGN)                                       */
 /* ========================================================================== */
 
-@media screen and (max-width: 576px) {
-  .main-info,
-  .contact_info_container {
+@media screen and (max-width: 768px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-info {
     flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
   }
 
   .experiences {
     margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .additional-info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header-hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-hero__photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .header-contact-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-strip__divider {
+    display: none;
   }
 }
