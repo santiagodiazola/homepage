@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   line-height: 1.5;
 
   --primary-text-color: #181820;
@@ -18,6 +18,32 @@ body {
   --icon-color: #6a737d;
   --border-color: #ff9a0045;
   --text-decoration-color: #ff9a00;
+}
+/* ========================================================================== */
+/* GLOBAL UNIFIED SECTION HEADERS                                            */
+/* ========================================================================== */
+
+/* Center Section Headers (QA Skills & Tools, QA Projects & Portfolio) */
+.skills__header {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Left-Aligned Column Headers (Professional Experience, Education, etc.) */
+.experiences__header,
+.section-header-clean,
+.editorial-header {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 
@@ -94,11 +120,13 @@ body {
   color: var(--secondary-text-color);
   text-decoration: none;
   display: flex;
-  justify-content: start;
+  align-items: center;
+  font-size: 0.9em;
+  font-weight: 500;
 }
 
 .contact-info__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 12px; /* Smooth spacing for 3 stacked links */
 }
 
 .contact-info__item-icon-wrapper {
@@ -124,6 +152,7 @@ body {
   object-fit: cover;
   border: 3px solid var(--text-decoration-color);
 }
+
 
 
 /* ========================================================================== */
@@ -229,7 +258,88 @@ body {
   border-radius: 10px;
   background-color: #ffffff;
 }
+/* ========================================================================== */
+/* PROJECT CARDS & REPOSITORY BUTTONS                                         */
+/* ========================================================================== */
 
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.1);
+  border-color: #cbd5e1;
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.project-card__title {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+.github-link-btn {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #0066cc;
+  background-color: #f0f7ff;
+  border: 1px solid #bae0ff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.github-link-btn:hover {
+  background-color: #0066cc;
+  color: #ffffff;
+  border-color: #0066cc;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  font-size: 0.78em;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  background-color: #f5a623;
+  color: #ffffff;
+}
+
+.project-card__description {
+  font-size: 0.88em;
+  color: var(--secondary-text-color);
+  line-height: 1.55;
+  margin: 0;
+}
 
 /* ========================================================================== */
 /* 6. PROFESSIONAL EXPERIENCE SECTION                                         */
@@ -240,10 +350,30 @@ body {
   margin-right: 50px;
 }
 
+/* Standardized Left Header */
 .experiences__header {
-  color: var(--secondary-text-color);
+  color: #1a1a1a;
+  font-size: 1.2em;
+  font-weight: 700;
   text-align: left;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Standardized Right Header (Identical line height & sizing) */
+.section-header-clean {
+  font-size: 1.2em;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Aligns first education card with left column's first role entry */
+.education-item:first-of-type {
+  margin-top: 42px;
 }
 
 .experiences__company-header-durability {
@@ -294,7 +424,16 @@ body {
 }
 
 .additional-info__education {
-  margin-bottom: 20px;
+  margin-bottom: 16px; /* Tightened container gap */
+}
+
+.education-item {
+  margin-bottom: 28px; /* Standardized spacing between items */
+}
+
+/* Prevents stacked margins above Languages header */
+.education-item:last-child {
+  margin-bottom: 0;
 }
 
 .additional-info__education-header {
@@ -371,6 +510,13 @@ body {
   border-color: #0066cc;
 }
 
+.editorial-header {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 24px;
+  margin-bottom: 8px; /* Reduced from default browser spacing to pull items up */
+}
 
 /* ========================================================================== */
 /* 8. MEDIA QUERIES (RESPONSIVE DESIGN)                                       */
